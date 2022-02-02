@@ -1,0 +1,3 @@
+latest version of selenium module
+latest version of tkinter module
+
