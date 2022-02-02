@@ -86,13 +86,3 @@ class InstaBot:
             if not(elem in self.followings):
                 users_u_dont_follow.append(elem)
         return (users_dont_follow_u_back,users_u_dont_follow)
-        # print("Users do not follow you back")
-        # for i in users_dont_follow_u_back:
-        #     print("--> ", i)
-        # print("\n\n")
-        # print("users you dont follow back")
-        # for j in users_u_dont_follow:
-        #     print("--> ",j)
-
-
-
