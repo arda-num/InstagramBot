@@ -14,10 +14,6 @@ class App(Tk):
 
         self.username = StringVar()
         self.password = StringVar()
-        # photo = PhotoImage(file="./photos/robo2.png")
-        # img = Label(self,image=photo)
-        # img.place(relx=0.5, rely=0.5, anchor=CENTER)
-
         login_frame = Frame()
         #####-LOGIN FRAME-######
         self.normal_sign = Message(master = login_frame, text= "Please enter your email & password to sign in.\n",width= 250,font = ("calibre",15))
@@ -44,7 +40,7 @@ class App(Tk):
         self.tx1.destroy(),self.tx2.destroy(),self.name_entry.destroy(),self.passw_entry.destroy(),self.normal_sign.destroy(),self.normal_sign_button.destroy()
         self.processing = Label(self,text = "Processing...")
         self.processing.place(relx = 0.5, rely= 0.4, anchor=CENTER)
-        self.update() ###JESUS
+        self.update()
         self.process_data()
         
 
@@ -60,7 +56,6 @@ class App(Tk):
         sleep(5)
         scrape.get_followings()
         users1,users2 = scrape.find_difference()
-        # PROCESSİNGİ KALDIR
         self.processing.destroy()
         self.open_list(users1,users2)
         
@@ -72,9 +67,6 @@ class App(Tk):
             self.destroy()
 
     def open_list(self,users1,users2):
-        # self = Toplevel(self)
-        # self.title("Results")
-        # self.geometry("700x500")
 
         instruction1 = Label(self, text = "Users who do not follow you back",font = ("FreeSans",10))
         instruction2 = Label(self, text = "Users who you do not follow back",font = ("FreeSans",10))
@@ -107,22 +99,3 @@ if __name__ == "__main__":
     app = App()
     app.protocol("WM_DELETE_WINDOW",app.on_close)
     app.mainloop()
-
-
-
-
-
-        #frames = [PhotoImage(file='./sand-clock-loader.gif',format = 'gif -index %i' %(i)) for i in range(31)]
-
-        # def update(ind):
-        #     frame = frames[ind]
-        #     ind += 1
-        #     print(ind)
-        #     if ind>30: #With this condition it will play gif infinitely
-        #         ind = 0
-        #     label.configure(image=frame)
-        #     self.after(100, update, ind)
-
-        # label = Label(self)
-        # label.pack()
-        # self.after(0, update, 0)
