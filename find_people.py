@@ -6,9 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
-# Account Info
-# username = "gs_ardaaa@hotmail.com"
-# password = "Arda_123"
 
 class InstaBot:
     def __init__(self,browser):
